@@ -1,0 +1,9 @@
+.additional-catalog {}
+
+.additional-catalog__title {
+  @media (max-width: 767px) {
+    @include heading-styles(24px);
+  }
+}
+
+.additional-catalog__list {}

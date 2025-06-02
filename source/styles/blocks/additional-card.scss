@@ -1,0 +1,18 @@
+.additional-card {
+  list-style: none;
+}
+
+.additional-card__title {
+  font-family: $title-font;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.additional-card__description {}
+
+.additional-card__link {}

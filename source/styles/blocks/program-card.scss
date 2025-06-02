@@ -1,0 +1,19 @@
+.program-card {}
+
+.program-card__title {
+  @media (max-width: 767px) {
+    @include heading-styles(24px);
+  }
+}
+
+.program-card__description {}
+
+.program-card__link {
+  font-family: $title-font;
+  color: $title-color;
+  text-decoration: none;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}

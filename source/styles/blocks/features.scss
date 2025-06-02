@@ -1,0 +1,12 @@
+.features {}
+
+.features__slogan {
+  @media (max-width: 767px) {
+    @include heading-styles(36px);
+  }
+}
+
+.features__list {}
+
+.features__item {}
+

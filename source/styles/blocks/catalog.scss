@@ -1,0 +1,11 @@
+.catalog {}
+
+.catalog__title {
+  @media (max-width: 767px) {
+    @include heading-styles(36px);
+  }
+}
+
+.catalog__list {}
+
+.catalog__item {}
