@@ -8,10 +8,14 @@
   }
 }
 
-@mixin heading-styles($size) {
+@mixin heading-styles($font-size, $line-height: null) {
   font-family: $title-font;
   font-weight: 400;
   color: $title-color;
-  font-size: $size;
+  font-size: $font-size;
   margin: 0;
+
+  @if $line-height != null {
+    line-height: $line-height;
+  }
 }

@@ -4,7 +4,7 @@
 
 .additional-catalog__title {
   @media (max-width: 767px) {
-    @include heading-styles(24px);
+    @include heading-styles(24px, 24px);
   }
 }
 
