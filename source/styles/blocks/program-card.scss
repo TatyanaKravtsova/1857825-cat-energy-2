@@ -1,19 +1,34 @@
-.program-card {}
-
-.program-card__title {
+.program-card {
   @media (max-width: 767px) {
-    @include heading-styles(24px, 20px);
+    background-color: $alt-bg;
+    padding: 21px 20px 18px;
   }
 }
 
-.program-card__description {}
+.program-card__title {
+  @media (max-width: 767px) {
+    @include heading-styles(24px, 37px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
 
-.program-card__link {
-  font-family: $title-font;
-  color: $title-color;
-  text-decoration: none;
+.program-card__description {
+  margin: 0;
 
   @media (max-width: 767px) {
-    font-size: 16px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    line-height: 18px;
+  }
+}
+
+.program-card__link {
+  color: $title-color;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    @include button-styles(16px, 16px);
   }
 }

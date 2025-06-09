@@ -1,11 +1,23 @@
-.catalog {}
-
-.catalog__title {
+.catalog {
   @media (max-width: 767px) {
-    @include heading-styles(36px, 36px);
+    border-bottom: 1px solid #ebebeb;
   }
 }
 
-.catalog__list {}
+.catalog__title {
+  @media (max-width: 767px) {
+    padding-top: 27px;
+    padding-bottom: 41px;
+    padding-left: 20px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #ebebeb;
+  }
+}
 
-.catalog__item {}
+.catalog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* .catalog__item {} */

@@ -1,7 +1,11 @@
 .button {
   background-color: $primary-bg;
-  color: #ffffff;
+  color: $text-light;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
-.button--show-all {}
+.button--show-all {
+  color: $text-color;
+  background-color: $alt-bg;
+}

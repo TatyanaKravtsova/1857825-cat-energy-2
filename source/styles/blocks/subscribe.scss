@@ -1,5 +1,16 @@
-.ubscribe {}
+.subscribe {
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
 
-.subscribe__text {}
+.subscribe__text {
+  @media (max-width: 767px) {
+    @include heading-styles (16px, 24px);
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
 
-.subscribe__form {}
+/* .subscribe__form {
+
+} */

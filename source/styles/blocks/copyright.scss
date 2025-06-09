@@ -1,7 +1,11 @@
-.copyright {}
+/* .copyright {} */
 
 .copyright__link {
-  font-size: 16px;
   text-decoration: none;
   color: $text-color;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
