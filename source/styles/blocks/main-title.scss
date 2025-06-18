@@ -8,7 +8,7 @@
 }
 
 .main-title--light {
-  @media (max-width: ($tablet-1px)) {
+  @media (max-width: (767px)) {
     color: $text-light;
   }
 }

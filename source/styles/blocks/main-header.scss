@@ -30,6 +30,7 @@
   }
 }
 
+
 .main-header__menu-button span {
   display: block;
   width: 100%;
@@ -52,6 +53,28 @@
 .main-header__menu-button--opened span:nth-child(4) {
   height: 1.5px;
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.main-header__logo {
+  position: relative;
+  min-height: 38px;
+  margin: 0;
+
+  @media (max-width: 767px) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 89px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 101px;
+      height: 19.5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-image: url("../../images/logo-text.svg");
+    }
+  }
 }
 
 .main-header__logo:hover {
@@ -92,9 +115,30 @@
   }
 }
 
+
 .main-header__nav--opened {
   max-height: 500px;
   opacity: 1;
   visibility: visible;
 }
 
+.no-js.main-header {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.no-js.main-header__menu-button {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.no-js.main-header__nav {
+  @media (max-width: 767px) {
+    position: static;
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
