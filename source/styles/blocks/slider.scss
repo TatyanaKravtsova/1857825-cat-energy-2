@@ -1,8 +1,37 @@
-/* .slider {}
+.slider {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 256px;
+  overflow: hidden;
 
-.slider__controls {}
+  @media (min-width: $tablet) {
+    height: 560px;
+  }
+}
 
-.slider__image {} */
+.slider__controls {
+  position: absolute;
+  left: 50%;
+}
+
+.slider__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider__image--left {
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.slider__image--right {
+  right: 0;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
 
 .slider__button {
   position: relative;
@@ -16,6 +45,10 @@
   padding: 0;
   cursor: pointer;
   transition: all 0.3s;
+
+  @media (min-width: $tablet) {
+    height: 560px;
+  }
 }
 
 .slider__thumb {

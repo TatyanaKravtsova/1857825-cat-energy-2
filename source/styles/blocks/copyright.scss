@@ -8,12 +8,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
 
-
-  @media (max-width: 767px) {
-    font-size: 16px;
-    line-height: 20px;
-  }
 
   &::after {
     content: "";
@@ -25,5 +22,9 @@
     mask-repeat: no-repeat;
     mask-image: url("../../icons/stack.svg#html_academy-icon");
     mask-size: contain;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 23px;
   }
 }

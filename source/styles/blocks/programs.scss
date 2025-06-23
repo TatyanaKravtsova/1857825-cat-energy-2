@@ -3,6 +3,11 @@
     min-width: 320px;
     padding: 0 20px;
   }
+
+  @media (min-width: $tablet) {
+    min-width: 708px;
+    padding: 0 30px;
+  }
 }
 
 .programs__list {
@@ -12,7 +17,10 @@
 
 .programs__item {
   @media (max-width: 767px) {
-    min-height: 266px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
   }
 }

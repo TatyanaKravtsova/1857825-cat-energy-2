@@ -5,6 +5,11 @@
   @media (max-width: 767px) {
     padding: 26px 20px;
   }
+
+  @media (min-width: $tablet) {
+    padding: 60px 70px;
+    gap: 308px;
+  }
 }
 
 .contacts__invite {
@@ -12,19 +17,40 @@
   text-transform: uppercase;
   color: #111111;
   margin: 0;
+  min-width: 60px;
 
   @media (max-width: 767px) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
   }
 }
 
 .contacts__address {
   margin: 0;
   color: #444444;
+  min-width: 60px;
 
   @media (max-width: 767px) {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  span {
+    @media (min-width: $tablet) {
+      display: inline-block;
+      padding-top: 20px;
+    }
   }
 }
