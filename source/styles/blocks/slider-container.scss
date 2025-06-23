@@ -1,1 +1,6 @@
-/* .slider-container {} */
+.slider-container {
+  @media (min-width: $tablet) {
+    background: linear-gradient(to bottom, $text-light 30%, $second-bg 30%);
+    padding-bottom: 101px;
+  }
+}
