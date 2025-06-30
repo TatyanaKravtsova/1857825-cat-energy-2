@@ -9,6 +9,12 @@
   @media (min-width: $tablet) {
     height: 560px;
   }
+
+  @media (min-width: $desktop) {
+    right: 0;
+    width: 560px;
+    height: 512px; // Ширина слайдера
+  }
 }
 
 .slider__controls {
@@ -36,7 +42,7 @@
 .slider__button {
   position: relative;
   display: inline-block;
-  width: 2px;
+  width: 4px;
   height: 256px;
   background: #666666;
   border: none;

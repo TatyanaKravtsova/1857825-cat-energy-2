@@ -1,4 +1,9 @@
-/* .map {} */
+.map {
+  @media (max-width: $desktop) {
+    grid-area: map;
+    height: auto;
+  }
+}
 
 .map__image {
   width: 100%;

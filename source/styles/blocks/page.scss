@@ -4,7 +4,41 @@
   box-sizing: border-box;
 }
 
+/* img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+} */
 
 .page__body {
   margin: 0;
 }
+
+.page__body--index {
+  @media (min-width: $desktop) {
+    width: 100%;
+    position: relative; // Добавляем для позиционирования псевдоэлемента
+    overflow-x: hidden;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      max-height: 694px;
+      max-width: 720px;
+      width: 50%;// Ограничиваем ширину
+      background:
+        #505155 0%,
+        image-set(
+          url("../../images/background-index-desktop 1@1x.jpg") 1x,
+          url("../../images/background-index-desktop 1@2x.jpg") 2x
+        ) 100% 0/contain no-repeat;
+      z-index: 1;
+    }
+  }
+}
+

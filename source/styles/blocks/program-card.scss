@@ -3,7 +3,7 @@
   padding: 30px 20px 18px;
 
   @media (max-width: 767px) {
-    &:nth-child(1) .program-card__title::before {
+    &.program-card--seat .program-card__title::before {
       content: "";
       position: absolute;
       left: 0;
@@ -15,7 +15,7 @@
       background-size: contain;
     }
 
-    &:nth-child(2) .program-card__title::before {
+    &.program-card--ran .program-card__title::before {
       content: "";
       position: absolute;
       left: -5px;
@@ -28,21 +28,59 @@
     }
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: 1330px) {
     padding: 77px 316px 53px 52px;
 
-    &:nth-of-type(1) {
+    &.program-card--seat {
       background-image: url("../../icons/stack.svg#cat_back-seat");
       background-size: 200px 211px;
       background-position: 90% 50%;
       background-repeat: no-repeat;
     }
 
-    &:nth-of-type(2) {
+    &.program-card--ran {
       background-image: url("../../icons/stack.svg#cat_back-run");
       background-size: 268px 200px;
       background-position: 93% 50%;
       background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 41px 61px 55px 52px;
+    max-width: 570px;
+    min-height: 374px;
+
+    &.program-card--seat .program-card__title {
+      padding-left: 162px;
+    }
+
+    &.program-card--seat .program-card__title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 106px;
+      background-image: url("../../icons/stack.svg#cat_back-seat");
+      background-size: contain;
+    }
+
+    &.program-card--ran .program-card__title {
+      padding-left: 181px;
+    }
+
+    &.program-card--ran .program-card__title::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 134px;
+      height: 100px;
+      background-image: url("../../icons/stack.svg#cat_back-run");
+      background-size: contain;
     }
   }
 }
@@ -60,6 +98,13 @@
     @include heading-styles(36px, 36px);
     padding-bottom: 24px;
   }
+
+  @media (min-width: $desktop) {
+    @include heading-styles(36px, 36px);
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 34px;
+  }
 }
 
 
@@ -76,6 +121,12 @@
   @media (min-width: $tablet) {
     padding-top: 24px;
     padding-bottom: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 34px 0 23px;
     font-size: 16px;
     line-height: 24px;
   }

@@ -1,4 +1,6 @@
-/* .navigation {} */
+/* .navigation {
+
+} */
 
 .navigation__list {
   font-family: $title-font;
@@ -11,6 +13,17 @@
 
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    min-height: unset;
+    height: auto;
+    display: flex;
+    max-width: 677px;
+    flex-wrap: wrap;
     gap: 33px;
   }
 }
@@ -18,11 +31,19 @@
 .navigation__item {
   border-bottom: 1px solid #e6e6e6;
   text-align: center;
-  padding-top: 22px;
-  padding-bottom: 24px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   @media (min-width: $tablet) {
     border-bottom: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
   }
 }
 
@@ -44,14 +65,31 @@
     transition: all 0.3s ease;
   }
 
+
   &:active {
     opacity: 30%;
   }
-}
+
+  &--index {
+    @media (min-width: $desktop) {
+      color: $text-light;
+    }
+  }
 
 
-.navigation__link--active {
-  display: inline;
-  box-shadow: inset 0 -2px 0 $primary-bg;
-  padding-bottom: 10px;
+  &--active {
+    @media (min-width: $tablet) {
+      display: inline-block;
+      box-shadow: inset 0 -2px 0 $primary-bg; // Зелёная тень для всех страниц
+      padding-bottom: 10px;
+    }  // Главная страница (переопределение)
+  }
+
+  &--active-light {
+    @media (min-width: $desktop) {
+      color: $text-light;
+      box-shadow: inset 0 -2px 0 $text-light; // Белая тень для главной страницы
+    }
+  }
 }
+

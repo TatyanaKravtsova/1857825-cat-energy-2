@@ -1,7 +1,15 @@
 .stats {
   @media (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
     padding: 0 30px 99px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 222px;
+    padding: 0 0 75px;
+    max-width: 436px;
+    gap: 42px 55px;
   }
 }
 
@@ -59,6 +67,10 @@
     background: $text-light;
     padding: 0 5px;
   }
+
+  @media (min-width: $desktop) {
+    background: $second-bg;
+  }
 }
 
 .stats__cost {
@@ -76,5 +88,11 @@
     max-width: 174px;
     margin-left: auto;
     text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    @include heading-styles(20px, 20px);
+    margin: 0;
+    max-width: 436px;
   }
 }
