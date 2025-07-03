@@ -5,13 +5,18 @@
     padding: 0 20px;
     flex-direction: column;
   }
-}
 
-.actions__title {
-  @media (max-width: 767px) {
-    @include heading-styles(24px, 24px);
-    order: 2;
-    padding-block: 40px 32px;
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    padding: 0 30px 70px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 110px 0 0;
+    grid-column: 2;
+    grid-row: 2 / span 3;
   }
 }
 
@@ -30,6 +35,37 @@
       ) center/contain no-repeat,
       #8a8a8a;
   }
+
+  @media (min-width: $tablet) {
+    min-width: 707px;
+    min-height: 200px;
+    background:
+      linear-gradient(
+        rgba($lighter-primary-bg, 0.85),
+        rgba($lighter-primary-bg, 0.85)
+      ),
+      image-set(
+        url("../../images/background-catalog-action-tablet@1x.jpg") 1x,
+        url("../../images/background-catalog-action-tablet@2x.jpg") 2x
+      ) center/contain no-repeat,
+      #8a8a8a;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 245px;
+    min-height: 288px;
+    margin-top: 108px;
+    background:
+      linear-gradient(
+        rgba($lighter-primary-bg, 0.85),
+        rgba($lighter-primary-bg, 0.85)
+      ),
+      image-set(
+        url("../../images/background-catalog-action-desktop@1x.jpg") 1x,
+        url("../../images/background-catalog-action-desktop@2x.jpg") 2x
+      ) center/contain no-repeat,
+      #8a8a8a;
+  }
 }
 
 .actions__description {
@@ -38,6 +74,20 @@
   text-align: center;
   color: $text-light;
   padding: 187px 61px 43px 58px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    max-width: 161px;
+    left: 421px;
+    top: 71px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    max-width: 161px;
+    left: 15%;
+    top: 68%;
+  }
 
   &::before {
     content: "";
@@ -52,6 +102,16 @@
     @media (max-width: 767px) {
       background-size: 78px 80px;
       top: 20%;
+    }
+
+    @media (min-width: $tablet) {
+      top: -22%;
+      right: 421px;
+    }
+
+    @media (min-width: $desktop) {
+      top: -275%;
+      right: 20%;
     }
   }
 }
