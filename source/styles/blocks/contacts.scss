@@ -66,3 +66,9 @@
     }
   }
 }
+
+.contacts--mobile {
+  @media (max-width: 1329px) {
+    background-color: $alt-bg;
+  }
+}
