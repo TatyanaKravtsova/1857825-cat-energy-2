@@ -7,13 +7,12 @@
   overflow: hidden;
 
   @media (min-width: $tablet) {
-    height: 560px;
+    height: 512px;
   }
 
   @media (min-width: $desktop) {
-    right: 0;
     width: 560px;
-    height: 512px; // Ширина слайдера
+    height: 512px;
   }
 }
 
@@ -68,6 +67,10 @@
   border: 2px solid #666666;
   border-radius: 50%;
   transition: inherit;
+
+  @media (min-width: $tablet) {
+    top: 46%;
+  }
 }
 
 .slider__thumb::after {
@@ -84,6 +87,7 @@
   mask-repeat: no-repeat;
   transition: inherit;
 }
+
 
 .slider__button:hover {
   background: #68b738;

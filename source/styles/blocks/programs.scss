@@ -19,11 +19,18 @@
   list-style: none;
   padding-left: 0;
 
-  @media (min-width: $desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @media (min-width: 1330px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    justify-content: center;
     gap: 80px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1220px;
+    margin: 0 auto;
   }
 }
 

@@ -24,24 +24,62 @@
 .additional-catalog__title {
   @media (max-width: 767px) {
     @include heading-styles(24px, 24px);
-    padding-block: 36px;
-    border-bottom: 1px solid $border-primary;
+    padding-top: 25px;
+    padding-bottom: 34px;
+    position: relative;
+    width: fit-content;
+    background: $text-light;
+    box-shadow: -40px 0 0 0 $text-light, 40px 0 0 0 $text-light;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      right: 0;
+      width: 100vw;
+      height: 2px;
+      background: #68b738;
+      box-shadow: 100vw 0 0 0 #68b738;
+      z-index: -1;
+    }
   }
 
   @media (min-width: $tablet) {
     @include heading-styles(32px, 32px);
-    padding: 0 40px 80px 70px;
+    padding: 0 0 80px;
     border: none;
+    position: relative;
+    width: fit-content;
+    background: $text-light;
+    box-shadow: -40px 0 0 0 $text-light, 40px 0 0 0 $text-light;
+    margin-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14%;
+      right: 0;
+      width: 100vw;
+      height: 2px;
+      background: #68b738;
+      box-shadow: 100vw 0 0 0 #68b738;
+      z-index: -1;
+    }
   }
 
   @media (min-width: $desktop) {
+    @include heading-styles(40px, 40px);
     grid-column: 1 / -1;
     left: 0;
     position: relative;
     text-align: start;
-
     min-height: 40px;
     padding: 0 0 80px;
+    margin-left: 0;
+
+    &::before {
+      top: 16%;
+    }
   }
 }
 
@@ -50,6 +88,7 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  border-top: 1px #cdcdcd solid;
 
   @media (min-width: $tablet) {
     border-top: 1px #cdcdcd solid;

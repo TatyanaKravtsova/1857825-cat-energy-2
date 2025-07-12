@@ -15,8 +15,8 @@
       background:
         linear-gradient(
           to bottom,
-          rgba($lighter-primary-bg, 0.85) 60%,
-          $text-light 60%
+          rgba($lighter-primary-bg, 0.85) 61%,
+          $text-light 61%
         );
       z-index: 2;
     }
@@ -27,12 +27,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      height: 60%; // Соответствует зеленой части верхнего слоя
+      height: 61%; // Соответствует зеленой части верхнего слоя
       width: 100%;
       background:
         image-set(
-          url("../../images/background-index-mobile@1x.jpg") 1x,
-          url("../../images/background-index-mobile@2x.jpg") 2x
+          url("../../images/background-index-mobile@1x.webp") 1x,
+          url("../../images/background-index-mobile@2x.webp") 2x
         ) 50% 0/contain no-repeat;
       z-index: 1;
       background-blend-mode: overlay;
@@ -51,31 +51,8 @@
     overflow: hidden;
     background-color: $text-light;
     text-align: left;
-
-    &::before { // Добавляем новый псевдоэлемент для фона
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 50%;
-      background-color: #505155;
-      z-index: 0;
-    }
-
-    // Верхний слой (зеленый градиент + белый)
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to left,
-          rgba($lighter-primary-bg, 0.85) 50%,
-          $text-light 50%
-        );
-      z-index: 2;
-    }
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -88,7 +65,7 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 65px 223px 40px 120px;
+    padding: 63px 223px 40px 120px;
   }
 
   @media (min-width: $desktop) {
@@ -121,10 +98,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 0 10px 52px 190px;
+    padding: 0 10px 22px 190px;
 
     @include heading-styles(20px, 20px);
-    color: $text-color;
+    color: $title-color;
     z-index: 4;
     position: relative;
     text-align: left;
@@ -160,6 +137,7 @@
 
   @media (min-width: $tablet) {
     margin: 0 auto;
+    display: block;
   }
 
   @media (min-width: $desktop) {
@@ -183,13 +161,19 @@
 
   @media (max-width: 767px) {
     @include button-styles(16px, 20px);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 5px;
     position: relative;
     z-index: 3;
-    display: block;
+    /* display: block; */
     width: 280px;
+    min-height: 40px;
     margin: 0 auto;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: normal;
+    word-wrap: break-word;
   }
 
   @media (min-width: $tablet) {

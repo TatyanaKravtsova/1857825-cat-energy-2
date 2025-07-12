@@ -11,8 +11,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 0 110px 69px;
+    padding: 0 0 69px;
     border: none;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -47,14 +49,14 @@
     counter-reset: item 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 137px;
+    gap: 37px 57px;
   }
 
   @media (min-width: $desktop) {
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
-    gap: 84px;
+    gap: 82px;
   }
 }
 
